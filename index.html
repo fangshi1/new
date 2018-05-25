@@ -1,0 +1,572 @@
+
+<!doctype html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>钓友天下</title>
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="keywords" content="钓友天下" />
+<meta name="description" content="钓友天下" />
+
+
+<script src="http://www.diaoyoutx.com/data/resource/js/jquery.js"></script>
+<style type="text/css">
+.error_two{
+ display: block;
+    float: left;
+    width: 28%;
+    margin-left: 9%;
+}
+.error_two img{
+    display: block;
+    width: 17px;
+    float: left;
+    margin-top:6px;
+}
+.error_two small{
+    display: block;
+  float: left;
+  font-size: 14px;
+  color: #f00;
+  margin-left: 7px;
+  margin-top: 5px;
+}
+.info_error{
+  display: block;
+  width: 90%;
+  float: right;
+  padding: 5px 0;
+  margin-right: 1%;
+  color: #666;
+  font-size: 14px;
+  color: #666;
+}
+.info_error small{
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #f00;
+  margin-left: 7px;
+  margin-top: 5px;
+}
+.info_error img{
+    display: block;
+    width: 17px;
+    float: left;
+    margin-top:6px;
+}
+.active_time{
+      float: left;
+    margin: 2px 0 0 9px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+.map_bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color:rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999999;
+  display: none;
+}
+.map_bg .map_box{
+  width: 800px;
+  height: 500px;
+  margin:2% auto;
+  position: relative;
+}
+.map_bg .map_box .map_close{
+    display: block;
+    width: 34px;
+    top: -3%;
+    right: -2%;
+    position: absolute;
+}
+.post_active_area{
+    display: block;
+    width: 78%;
+    border-radius: 5px;
+    height: 300px;
+    resize: none;
+    border: 1px solid #ddd;
+    margin-left: 7px;
+    float: left;
+    margin-top: 10px;
+    outline: none;
+    color: #666;
+    border-color: #ddd;
+}
+.select_radio{
+  float: left;
+  margin-left: 5px;
+  margin-top: 12px;
+}
+.select_radio span{
+  display: block;
+  float: left;
+  color:#666;
+  font-size: 13px;
+}
+.select_radio input{
+  display: block;
+  float: left;
+    margin-left: 26px;
+    margin-top: 5px;
+    margin-right: 6px;
+
+}
+.show_map_btn{
+  display: block;
+  float: left;
+  margin-left:7px;
+  width: 25px;
+  margin-top: 2px;
+}
+.activer_input{
+  float: left;
+  width: 300px;
+  margin-left:10px;
+  padding: 3px 5px;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+  margin-top: 3px;
+  font-size: 12px;
+  color: #666;
+}
+.post_active_pic_right .get_picture_div .picture_load .picture_list p{
+    display: block;
+    position: absolute;
+    /* padding: 0px 7px; */
+    width: 19%;
+    height: 14px;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 15px;
+    background: #f00;
+    color: #fff;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.post_active_pic_right .get_picture_div .picture_load .picture_list img{
+  display: block;
+  width: 100%;
+}
+.post_active_pic_right .get_picture_div .picture_load .picture_list{
+  display: block !important;
+  float: left;
+  width: 15%;
+  float: left;
+  margin-right: 1%;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #fff;
+}
+.post_pic_prompt{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 2%;
+}
+.post_pic_prompt li{
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  color: #aaa;
+  padding: 3px 0;
+  line-height: 20px;
+}
+.post_active_pic_right{
+  float: left;
+  width: 80%;
+  overflow: hidden;
+  margin-left:5px;
+}
+.post_active_pic_right .get_picture_div{
+   float: left;
+   margin-left:10px;
+  overflow: hidden;
+  width: 50%;
+}
+.post_active_pic_right .get_picture_div .picture_load{
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.post_active_pic_right .get_picture_div .post_pic_btn{
+  display: block;
+  width: 50%;
+  text-align: center;
+  background: #f87622;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  text-decoration: none;
+}
+ .post_active_pic_right .big_posters{
+  display: block;
+  float: left;
+    width: 472px;
+    height: 280px;
+ }
+  .post_active_div{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 6px 0;
+  }
+  .post_active_div .post_active_tt{
+     width: 100%;
+     height: auto;
+     overflow: hidden;
+  }
+  .post_title{
+    display: block;
+    float: left;
+    font-size: 13px;
+    color:#666;
+    overflow: hidden;
+    margin-left:30px;
+    margin-top: 9px;
+  }
+  .post_active_div .post_active_tt input{
+    display: block;
+    float: left;
+    margin-left:5px;
+    padding:7px 10px;
+    font-size: 14px;
+    color: #666;
+    border-radius:10px;
+    width: 70%;
+    outline: none;
+    border: 1px solid #ddd;
+  }
+#r-result{
+    position: absolute;
+    z-index: 5;
+    left: 10px;
+    top:5px;
+}
+#searchText{
+    width: 180px;
+    height: 26px;
+    padding: 2px 10px;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid #7b98de;
+    display: inline-block;
+    float: left;
+}
+.sr{
+    width: 60px;
+    height: 32px;
+    background: #1b91c8;
+    border: 0px;
+    color: #FFF;
+    font-weight: bold;
+    display: inline-block;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="package">
+  <div class="manage" style="overflow: hidden;">
+     
+     
+      <div class="post_active_div">
+            <input type="text" placeholder="例如：南山科技园" id="hdaddrr" name="hdaddrr"  class="activer_input"/>
+            <img src="http://www.diaoyoutx.com/shop/resource/qp/image/show_map.png" alt="" class="show_map_btn">
+            <p class="info_error" style="display:none;" id="hdaddrrerror">
+              <img src="http://www.diaoyoutx.com/shop/resource/qp/image/error.png" alt="">
+            <small>请选择地点</small>
+          </p>
+      </div>
+      
+     
+     
+     
+  </div>
+</div>
+<div class="map_bg">
+     <div class="map_box">
+            <div id="r-result"><input value="" placeholder="请输入地点" id="searchText"/>
+             <input onclick="searchMap()" type="button" class="sr" value="搜索"/></div>
+            <div id="container" style="width:100%; height:100%;"></div>
+         <div style="padding: 10px 0;background: #FFF;text-align:center; position:!important;"><div style="width:80px; height:25px;color: #FFF; background-color:#1b91c8; margin:auto; cursor:pointer;"  onclick="setlnglan()" >确定</div></div>
+             <span class="span_address">选择坐标<t>*</t></span>
+              <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=na3iBWD8OPpjZWngqsdlcbT7GoQ3Hn03" ></script> 
+             
+            <span class="span_date" style="float: left;overflow: hidden;">活动时间<t>*</t></span>
+            <script type="text/javascript"> 
+            var map = new BMap.Map("container");  
+			var geoc = new BMap.Geocoder();
+            var marker;        // 创建地图实例
+            map.enableScrollWheelZoom();
+            map.centerAndZoom(new BMap.Point(114.41065808,23.11353985), 15);    
+            map.addEventListener("click", function(e){    
+//             alert(e.point.lng + ", " + e.point.lat);
+			var pt = e.point;
+			console.log(pt)
+			geoc.getLocation(pt, function(rs){
+			var addComp = rs.addressComponents;
+			console.log(addComp);
+//			district 区 
+			$("#hdaddrr").val(addComp.district + " " + addComp.street + " " + addComp.streetNumber);
+			});  
+			
+			
+            map.removeOverlay(marker);    
+            marker = new BMap.Marker(e.point);        // 创建标注    
+            map.addOverlay(marker);  
+            $("#hd_x").val(e.point.lng);
+            $("#hd_y").val(e.point.lat);
+            });
+            var local = new BMap.LocalSearch(map, {
+                renderOptions:{map: map}
+            });
+            var geolocation = new BMap.Geolocation();
+            geolocation.getCurrentPosition(function(r){
+                if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                    var mk = new BMap.Marker(r.point);
+                    map.addOverlay(mk);
+                    map.panTo(r.point);
+                }
+                else {
+                    alert("无法获得您当前地址！");
+                }
+            },{enableHighAccuracy: true})
+            function searchMap(){
+                local.search(document.getElementById("searchText").value);
+            }
+            </script> 
+            <img src="http://www.diaoyoutx.com/shop/resource/qp/image/x.png" alt="" class="map_close">
+     </div>
+</div>
+<script type="text/javascript">
+
+function setlnglan()
+{
+	if($('#hd_x').val()=="")
+	{
+		alert('请点选坐标');	
+		return;
+	}
+ $('#container').parent().parent().fadeOut();
+    $('body').css('overflow','auto');	
+}
+
+        
+</script>
+
+<script type="text/javascript">
+$("#laydate_today").click(function(){alert("666");});
+$('.show_map_btn').click(function(){
+   $('.map_bg').fadeIn();
+   $('body').css('height','100%;')
+   $('body').css('overflow','hidden');
+});
+$('.map_close').click(function(){
+   $(this).parent().parent().fadeOut();
+    $('body').css('overflow','auto');
+});
+//$('.map_bg').click(function(){
+// $(this).fadeOut();
+// $('body').css('overflow','auto');
+//});
+//$('.map_box').click(function(event){
+//  event.stopPropagation();
+//});
+//$('.close').live('click',function(){
+//  var this_img=$(this).prev('img').attr('src');
+//  var post_img=$('.big_posters');
+//  if (this_img==post_img.attr('src')) {
+//    $(post_img).attr('src','(unknown)');
+//  }else{
+//    $(this).parent().remove(); 
+//  }
+//});
+//$('.picture_list').live('click',function(){
+// $(this).css('border-color','#f00');
+// var poster=$(this).find('img').attr('src');
+// $('.big_posters').attr('src',poster);
+// $('.picture_list').not($(this)).css('border-color','#fff');
+//});
+//$('#add_picture').change(function(){
+//var srcs = getObjectURL(this.files[0]); //获取路径
+//var img = new Image();
+//img.src=srcs;
+//img.onload = function () {
+//  // alert(this.width + " " + this.height);
+//  var img_width=this.width;
+//  var img_height=this.height;
+//  // alert(img_height);
+//  if (img_width > 500 || img_height > 500) {
+//     alert('上传的图片不能大于500KB');
+//     $('#add_picture').val('');
+//     return false;
+//  }else{
+//    $('#add_picture').val('');
+//      var a=$('#add_picture').next().next();    
+//      $(a).find('img').attr('src',srcs);
+//      var b=$("#pic_div").clone();
+//      $('#picture_list').append(b);
+//  }
+//};
+//});
+//// 上传图片
+// function getObjectURL(file) {
+//var url = null;
+//if (window.createObjectURL != undefined) {
+// url = window.createObjectURL(file)
+//} else if (window.URL != undefined) {
+// url = window.URL.createObjectURL(file)
+//} else if (window.webkitURL != undefined) {
+// url = window.webkitURL.createObjectURL(file)
+//}
+//return url
+// };
+//
+//$('.post_div').live('click',function(){
+//  var fm=$(this).find('img').attr('src');
+//  $('.img_haibao').attr('src',fm);
+//  $(this).css('border-color','#f00');
+//  $('.post_div').not($(this)).css('border-color','#fff');
+//});
+//$('.fenlei').click(function(){
+// $(this).addClass('color');
+// $(this).find('input').attr('checked',true);
+// $('.fenlei').not($(this)).removeClass('color');
+//});
+//$('.fenlei_box').click(function(event){
+//  event.stopPropagation();
+//});
+//$('.img_tj').click(function(event){
+//  event.stopPropagation();
+// if ($('.fenlei_box').is(":hidden")){
+//   $('.fenlei_box').show();
+// }else{
+//  $('.fenlei_box').hide();
+// }
+//});
+//$('.manage').click(function(){
+//  $('.fenlei_box').hide();
+//});
+//$('.post_file').on('change',function(){
+//       var strsrc=getObjectURL(this.files[0]);
+//       // alert(strsrc);
+//       if ($('.post_div').length>10) {
+//           // alert(3);
+//           alert('最多智能上传10张照片');
+//           return false;
+//       }else{
+//          $('#post_box').find('img').attr('src',strsrc);
+//          var a=$('#post_box').clone();
+//          $('#post_box').after(a);
+//       }
+//
+//   });
+//  function getObjectURL(file) {
+//  var url = null ; 
+//  if (window.createObjectURL!=undefined) { // basic
+//      url = window.createObjectURL(file) ;
+//  } else if (window.URL!=undefined) { // mozilla(firefox)
+//      url = window.URL.createObjectURL(file) ;
+//  } else if (window.webkitURL!=undefined) { // webkit or chrome
+//      url = window.webkitURL.createObjectURL(file) ;
+//  }
+//  return url ;
+//}
+//
+//
+//
+////实例化编辑器
+////var ue = UE.getEditor('editor');
+////开始时间选择
+//laydate({
+//	elem: '#select-start-time',
+//	istime: true,
+//	format: 'YYYY-MM-DD',
+//	min: laydate.now(0), //日期范围限定 -1代表昨天，-2代表前天，以此类推
+//  choose: function(datas){
+//  	//$(this.elem).val(datas.split(",")[0]).next("input").val(datas.split(",")[1]);
+//		$(this.elem).val(datas.split(",")[0]);
+//      $("#hdbegintime").val(datas.split(",")[0]);
+//      var timestamp2 = Date.parse(new Date(datas));
+//      timestamp1 = timestamp2 - 172800000;
+//      timestamp2 = timestamp2 - 345600000;
+//      var newDate1 = new Date(timestamp1);
+//      var newDate = new Date(timestamp2);
+//      $("#select-end-time").val(datas.split(",")[0]);
+//      $("#hdendtime").val(datas.split(",")[0]);
+//      $("#hdbaoendtime").val(newDate.toJSON().slice(0,10));
+//      $("#hdnotui").val(newDate1.toJSON().slice(0,10));
+//
+//  }
+//});
+////结束时间选择
+//laydate({
+//	elem: '#select-end-time',
+//	istime: true,
+//	format: 'YYYY-MM-DD,hh:mm:ss',
+//	min: laydate.now(0), //日期范围限定 -1代表昨天，-2代表前天，以此类推
+//  choose: function(datas){
+//  	//$(this.elem).val(datas.split(",")[0]).next("input").val(datas.split(",")[1]);
+//		$(this.elem).val(datas.split(",")[0]+" "+datas.split(",")[1]);
+//		$("#hdendtime").val(datas.split(",")[0]+" "+datas.split(",")[1]);
+//  }
+//});
+////结束时间选择
+//laydate({
+//	elem: '#hdbaoendtime',
+//	istime: true,
+//	format: 'YYYY-MM-DD,hh:mm:ss',
+//	min: laydate.now(0), //日期范围限定 -1代表昨天，-2代表前天，以此类推
+//  choose: function(datas){
+//  	$(this.elem).val(datas.split(",")[0]+" "+datas.split(",")[1]);
+//		//$("#hdendtime").val(datas.split(",")[0]+" "+datas.split(",")[1]);
+//  }
+//});
+//
+////结束时间选择
+//laydate({
+//	elem: '#hdnotui',
+//	istime: true,
+//	format: 'YYYY-MM-DD,hh:mm:ss',
+//	min: laydate.now(0), //日期范围限定 -1代表昨天，-2代表前天，以此类推
+//  choose: function(datas){
+//  	$(this.elem).val(datas.split(",")[0]+" "+datas.split(",")[1]);
+//		//$("#hdendtime").val(datas.split(",")[0]+" "+datas.split(",")[1]);
+//  }
+//});
+//
+//
+//$('.pic_cancel').live('click',function(){
+// $(this).parent().remove();
+//});
+//function onbl(){
+//  var val_1 = $("#hdqiangpiao").val();
+//  var val_2 = $("#hdnum").val();
+//  if(val_1 > val_2){
+//      alert("成团人数不能小于总人数");
+//      $("#hdnum").val("")
+//  }
+//}
+//function onbl_je(){
+//  var val_1 = $("#hdjine").val();
+//  var val_2 = $("#hdjineyuan").val();
+//  if(val_1 > val_2){
+//      alert("活动金额不能小于活动原始金额");
+//      $("#hdnum").val("")
+//  }
+//}
+</script>
+
+</body>
+</html>
